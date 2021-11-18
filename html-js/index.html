@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>sin/cos/tan</h1>
+
+
+<input type="text" id="txt" value="" />
+<button id="sin">sin</button></div>
+<button id="cos">cos</button></div>
+<button id="tan">tan</button></div>
+<p id="int"></p>
+
+<script>
+    window.onload = function() {
+        var sin = document.getElementById("sin");
+        var cos = document.getElementById("cos");
+        var tan = document.getElementById("tan");
+
+        if (sin.addEventListener) {
+            sin.addEventListener("click", sinClick, false);
+        } else if (sin.attachEvent) {
+            sin.attachEvent("onclick", sinClick);
+        }
+
+        if (cos.addEventListener) {
+            cos.addEventListener("click", cosClick, false);
+        } else if (cos.attachEvent) {
+            cos.attachEvent("onclick", cosClick);
+        }
+
+        if (tan.addEventListener) {
+            tan.addEventListener("click", tanClick, false);
+        } else if (tan.attachEvent) {
+            tan.attachEvent("onclick", tanClick);
+        }
+    }
+
+    function sinClick() {
+        alert(Math.sin(document.getElementById("txt").value));
+    }
+
+    function cosClick() {
+        alert(Math.cos(document.getElementById("txt").value));
+    }
+
+    function tanClick() {
+        alert(Math.tan(document.getElementById("txt").value));
+    }
+</script> 
+
+</body>
+</html>
